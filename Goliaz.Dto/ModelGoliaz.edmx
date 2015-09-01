@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="goliazco_FWModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="goliazco_FWModelStoreContainer">
+          <EntitySet Name="DAYS" EntityType="goliazco_FWModel.Store.DAYS" store:Type="Tables" Schema="goliazco_FW" />
+          <EntitySet Name="DAYS_CONFIG" EntityType="goliazco_FWModel.Store.DAYS_CONFIG" store:Type="Tables" Schema="goliazco_FW" />
+          <EntitySet Name="DAYS_REPORT" EntityType="goliazco_FWModel.Store.DAYS_REPORT" store:Type="Tables" Schema="goliazco_FW" />
+          <EntitySet Name="LOG_ERROR" EntityType="goliazco_FWModel.Store.LOG_ERROR" store:Type="Tables" Schema="goliazco_FW" />
+          <EntitySet Name="REPORT_DAY" EntityType="goliazco_FWModel.Store.REPORT_DAY" store:Type="Tables" Schema="goliazco_FW" />
+          <EntitySet Name="USERS" EntityType="goliazco_FWModel.Store.USERS" store:Type="Tables" Schema="goliazco_FW" />
+          <AssociationSet Name="FK_DAYS_CONFIG_DAYS" Association="goliazco_FWModel.Store.FK_DAYS_CONFIG_DAYS">
+            <End Role="DAYS" EntitySet="DAYS" />
+            <End Role="DAYS_CONFIG" EntitySet="DAYS_CONFIG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DAYS_REPORT_USERS" Association="goliazco_FWModel.Store.FK_DAYS_REPORT_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="DAYS_REPORT" EntitySet="DAYS_REPORT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REPORT_DAY_DAYS_REPORT" Association="goliazco_FWModel.Store.FK_REPORT_DAY_DAYS_REPORT">
+            <End Role="DAYS_REPORT" EntitySet="DAYS_REPORT" />
+            <End Role="REPORT_DAY" EntitySet="REPORT_DAY" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DAYS">
+          <Key>
+            <PropertyRef Name="idDay" />
+          </Key>
+          <Property Name="idDay" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Day" Type="int" />
+          <Property Name="state" Type="varchar" MaxLength="50" />
+          <Property Name="completeDay" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DAYS_CONFIG">
+          <Key>
+            <PropertyRef Name="idReportNum" />
+          </Key>
+          <Property Name="idReportNum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" MaxLength="300" />
+          <Property Name="dataType" Type="varchar" MaxLength="100" />
+          <Property Name="idDay" Type="int" />
+          <Property Name="max_reps" Type="int" />
+          <Property Name="description" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="DAYS_REPORT">
+          <Key>
+            <PropertyRef Name="idRegister" />
+          </Key>
+          <Property Name="idRegister" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idUser" Type="int" Nullable="false" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="day" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOG_ERROR">
+          <Key>
+            <PropertyRef Name="id_log" />
+          </Key>
+          <Property Name="id_log" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="error" Type="varchar" MaxLength="1000" />
+          <Property Name="fecha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="REPORT_DAY">
+          <Key>
+            <PropertyRef Name="idReportDay" />
+          </Key>
+          <Property Name="idReportDay" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="DataInform" Type="varchar" MaxLength="20" />
+          <Property Name="Inform" Type="varchar" MaxLength="30" />
+          <Property Name="idRegister" Type="int" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="idUser" />
+          </Key>
+          <Property Name="idUser" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="birthDate" Type="datetime" Nullable="false" />
+          <Property Name="gender" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="nationality" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="pass" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="poseidon_pb" Type="varchar" MaxLength="15" />
+          <Property Name="hades_pb" Type="varchar" MaxLength="15" />
+          <Property Name="venus_pb" Type="varchar" MaxLength="15" />
+          <Property Name="estado" Type="varchar" MaxLength="20" />
+          <Property Name="codeConfirm" Type="varchar" MaxLength="20" />
+          <Property Name="REGISTER_DAY" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_DAYS_CONFIG_DAYS">
+          <End Role="DAYS" Type="goliazco_FWModel.Store.DAYS" Multiplicity="0..1" />
+          <End Role="DAYS_CONFIG" Type="goliazco_FWModel.Store.DAYS_CONFIG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYS">
+              <PropertyRef Name="idDay" />
+            </Principal>
+            <Dependent Role="DAYS_CONFIG">
+              <PropertyRef Name="idDay" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DAYS_REPORT_USERS">
+          <End Role="USERS" Type="goliazco_FWModel.Store.USERS" Multiplicity="1" />
+          <End Role="DAYS_REPORT" Type="goliazco_FWModel.Store.DAYS_REPORT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="idUser" />
+            </Principal>
+            <Dependent Role="DAYS_REPORT">
+              <PropertyRef Name="idUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REPORT_DAY_DAYS_REPORT">
+          <End Role="DAYS_REPORT" Type="goliazco_FWModel.Store.DAYS_REPORT" Multiplicity="0..1" />
+          <End Role="REPORT_DAY" Type="goliazco_FWModel.Store.REPORT_DAY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYS_REPORT">
+              <PropertyRef Name="idRegister" />
+            </Principal>
+            <Dependent Role="REPORT_DAY">
+              <PropertyRef Name="idRegister" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="goliazco_FWModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="goliazco_FWEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LOG_ERROR" EntityType="goliazco_FWModel.LOG_ERROR" />
+          <EntitySet Name="REPORT_DAY" EntityType="goliazco_FWModel.REPORT_DAY" />
+          <EntitySet Name="USERS" EntityType="goliazco_FWModel.USERS" />
+          <EntitySet Name="DAYS" EntityType="goliazco_FWModel.DAYS" />
+          <EntitySet Name="DAYS_REPORT" EntityType="goliazco_FWModel.DAYS_REPORT" />
+          <AssociationSet Name="FK_DAYS_REPORT_USERS" Association="goliazco_FWModel.FK_DAYS_REPORT_USERS">
+            <End Role="USERS" EntitySet="USERS" />
+            <End Role="DAYS_REPORT" EntitySet="DAYS_REPORT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REPORT_DAY_DAYS_REPORT" Association="goliazco_FWModel.FK_REPORT_DAY_DAYS_REPORT">
+            <End Role="DAYS_REPORT" EntitySet="DAYS_REPORT" />
+            <End Role="REPORT_DAY" EntitySet="REPORT_DAY" />
+          </AssociationSet>
+          <EntitySet Name="DAYS_CONFIG" EntityType="goliazco_FWModel.DAYS_CONFIG" />
+          <AssociationSet Name="FK_DAYS_CONFIG_DAYS" Association="goliazco_FWModel.FK_DAYS_CONFIG_DAYS">
+            <End Role="DAYS" EntitySet="DAYS" />
+            <End Role="DAYS_CONFIG" EntitySet="DAYS_CONFIG" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LOG_ERROR">
+          <Key>
+            <PropertyRef Name="id_log" />
+          </Key>
+          <Property Type="Int32" Name="id_log" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="error" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="fecha" Precision="3" />
+        </EntityType>
+        <EntityType Name="REPORT_DAY">
+          <Key>
+            <PropertyRef Name="idReportDay" />
+          </Key>
+          <Property Type="Int32" Name="idReportDay" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DataInform" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Inform" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="idRegister" />
+          <NavigationProperty Name="DAYS_REPORT" Relationship="goliazco_FWModel.FK_REPORT_DAY_DAYS_REPORT" FromRole="REPORT_DAY" ToRole="DAYS_REPORT" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="idUser" />
+          </Key>
+          <Property Type="Int32" Name="idUser" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="email" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="birthDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="gender" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="nationality" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="pass" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="poseidon_pb" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="hades_pb" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="venus_pb" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="estado" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="codeConfirm" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DAYS_REPORT" Relationship="goliazco_FWModel.FK_DAYS_REPORT_USERS" FromRole="USERS" ToRole="DAYS_REPORT" />
+          <Property Type="DateTime" Name="REGISTER_DAY" Precision="3" />
+        </EntityType>
+        <EntityType Name="DAYS">
+          <Key>
+            <PropertyRef Name="idDay" />
+          </Key>
+          <Property Type="Int32" Name="idDay" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Day" />
+          <Property Type="String" Name="state" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="completeDay" Precision="3" />
+          <NavigationProperty Name="DAYS_CONFIG" Relationship="goliazco_FWModel.FK_DAYS_CONFIG_DAYS" FromRole="DAYS" ToRole="DAYS_CONFIG" />
+        </EntityType>
+        <EntityType Name="DAYS_REPORT">
+          <Key>
+            <PropertyRef Name="idRegister" />
+          </Key>
+          <Property Type="Int32" Name="idRegister" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="idUser" Nullable="false" />
+          <Property Type="DateTime" Name="date" Precision="3" />
+          <Property Type="Int32" Name="day" Nullable="false" />
+          <NavigationProperty Name="USERS" Relationship="goliazco_FWModel.FK_DAYS_REPORT_USERS" FromRole="DAYS_REPORT" ToRole="USERS" />
+          <NavigationProperty Name="REPORT_DAY" Relationship="goliazco_FWModel.FK_REPORT_DAY_DAYS_REPORT" FromRole="DAYS_REPORT" ToRole="REPORT_DAY" />
+        </EntityType>
+        <Association Name="FK_DAYS_REPORT_USERS">
+          <End Type="goliazco_FWModel.USERS" Role="USERS" Multiplicity="1" />
+          <End Type="goliazco_FWModel.DAYS_REPORT" Role="DAYS_REPORT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS">
+              <PropertyRef Name="idUser" />
+            </Principal>
+            <Dependent Role="DAYS_REPORT">
+              <PropertyRef Name="idUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REPORT_DAY_DAYS_REPORT">
+          <End Type="goliazco_FWModel.DAYS_REPORT" Role="DAYS_REPORT" Multiplicity="0..1" />
+          <End Type="goliazco_FWModel.REPORT_DAY" Role="REPORT_DAY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYS_REPORT">
+              <PropertyRef Name="idRegister" />
+            </Principal>
+            <Dependent Role="REPORT_DAY">
+              <PropertyRef Name="idRegister" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DAYS_CONFIG">
+          <Key>
+            <PropertyRef Name="idReportNum" />
+          </Key>
+          <Property Type="Int32" Name="idReportNum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="dataType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="idDay" />
+          <Property Type="Int32" Name="max_reps" />
+          <Property Type="String" Name="description" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DAYS" Relationship="goliazco_FWModel.FK_DAYS_CONFIG_DAYS" FromRole="DAYS_CONFIG" ToRole="DAYS" />
+        </EntityType>
+        <Association Name="FK_DAYS_CONFIG_DAYS">
+          <End Type="goliazco_FWModel.DAYS" Role="DAYS" Multiplicity="0..1" />
+          <End Type="goliazco_FWModel.DAYS_CONFIG" Role="DAYS_CONFIG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DAYS">
+              <PropertyRef Name="idDay" />
+            </Principal>
+            <Dependent Role="DAYS_CONFIG">
+              <PropertyRef Name="idDay" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="goliazco_FWModelStoreContainer" CdmEntityContainer="goliazco_FWEntities">
+          <EntitySetMapping Name="LOG_ERROR">
+            <EntityTypeMapping TypeName="goliazco_FWModel.LOG_ERROR">
+              <MappingFragment StoreEntitySet="LOG_ERROR">
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="error" ColumnName="error" />
+                <ScalarProperty Name="id_log" ColumnName="id_log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REPORT_DAY">
+            <EntityTypeMapping TypeName="goliazco_FWModel.REPORT_DAY">
+              <MappingFragment StoreEntitySet="REPORT_DAY">
+                <ScalarProperty Name="idRegister" ColumnName="idRegister" />
+                <ScalarProperty Name="Inform" ColumnName="Inform" />
+                <ScalarProperty Name="DataInform" ColumnName="DataInform" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="idReportDay" ColumnName="idReportDay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="goliazco_FWModel.USERS">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="REGISTER_DAY" ColumnName="REGISTER_DAY" />
+                <ScalarProperty Name="codeConfirm" ColumnName="codeConfirm" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="venus_pb" ColumnName="venus_pb" />
+                <ScalarProperty Name="hades_pb" ColumnName="hades_pb" />
+                <ScalarProperty Name="poseidon_pb" ColumnName="poseidon_pb" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="idUser" ColumnName="idUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DAYS">
+            <EntityTypeMapping TypeName="goliazco_FWModel.DAYS">
+              <MappingFragment StoreEntitySet="DAYS">
+                <ScalarProperty Name="completeDay" ColumnName="completeDay" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="idDay" ColumnName="idDay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DAYS_REPORT">
+            <EntityTypeMapping TypeName="goliazco_FWModel.DAYS_REPORT">
+              <MappingFragment StoreEntitySet="DAYS_REPORT">
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="idUser" ColumnName="idUser" />
+                <ScalarProperty Name="idRegister" ColumnName="idRegister" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DAYS_CONFIG">
+            <EntityTypeMapping TypeName="goliazco_FWModel.DAYS_CONFIG">
+              <MappingFragment StoreEntitySet="DAYS_CONFIG">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="max_reps" ColumnName="max_reps" />
+                <ScalarProperty Name="idDay" ColumnName="idDay" />
+                <ScalarProperty Name="dataType" ColumnName="dataType" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="idReportNum" ColumnName="idReportNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

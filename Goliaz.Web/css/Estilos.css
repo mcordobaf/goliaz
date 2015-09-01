@@ -1,0 +1,167 @@
+﻿﻿body {
+    background-image: url('../images/backgroundChallenge.jpg');
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: black;
+    font-size: 14px !important;
+    font-family: Arial,sans-serif;
+    text-transform: none;
+    overflow: hidden;
+}
+
+#container {
+    /*position:fixed;*/
+    text-align:center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.divBotonEspecial 
+{
+    height: 5rem; 
+    width: 200px;
+    bottom: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btnLoginEspecial {
+    text-align:center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color:#1661dd; 
+    border: 0px;
+    color: white;
+    top:50%; 
+    height: 4.5rem; 
+    font-size:1.5rem; 
+    width: 180px;
+    cursor: pointer;
+    position:relative;
+    display: block; 
+    margin: 0 auto;
+}
+
+.btnLoginEspecial:hover { 
+    background-color: #246EE9;
+}
+
+.divLogin{
+    background: rgba(255, 255, 255, 0.5);    
+}
+
+.spanColor {
+    color:red;
+}
+
+.divRegister{
+    background: rgba(255, 255, 255, 0.9);    
+}
+
+.ui-dialog-content {
+    background: rgba(255, 255, 255, 0.8);    
+}
+
+.noTitleStuff .ui-dialog-titlebar {
+    display:none
+}
+
+.ui-widget-content
+{
+    background: rgba(255, 255, 255, 0.8);    
+}
+
+input.watermark, textarea.watermark 
+{ 
+    color: #000; 
+    font-size: 14px !important;
+    height:20px;
+}
+
+input.marked, textarea.marked 
+{ 
+    font-size: 14px !important;
+    height:20px;
+    color: #999; 
+}
+
+.validate {
+    font-size: 14px !important;
+    height:20px;
+    color: #999; 
+    width:250px;
+}
+
+.txtPB {
+    font-size: 14px !important;
+    height:20px;
+    color: #999; 
+    width:250px;
+}
+
+.validatePass {
+    font-size: 14px !important;
+    height:20px;
+    color: #999; 
+    width:250px;
+}
+
+.watermark {
+    font-size: 14px !important;
+    height:20px;
+    color: #999; 
+    width:250px;
+}
+
+.boton{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color:#1661dd; 
+    border: 0px;
+    color: white; 
+    height: 40px; 
+    font-size:14px !important;
+    width:130px;
+    cursor: pointer; 
+}
+
+.boton:hover{
+    background-color: #246EE9;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+    body {
+        background-image: url('../images/backgroundMobile.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: black;
+        font-size: 12px !important;
+        font-family: Arial,sans-serif;
+    }
+
+    #container {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-align: center;
+    }
+
+    .btnLoginEspecial {
+        top : 10px !important;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color:#1661dd; 
+        border: 0px;
+        height: 4.5rem; 
+        font-size:1.5rem; 
+        width: 180px;
+        cursor: pointer;
+margin: 0px;
+padding: 0px;
+        /*margin: 0 auto !important;*/
+        position: fixed;
+     }
+}

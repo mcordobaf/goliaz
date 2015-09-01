@@ -1,0 +1,108 @@
+﻿body {
+    background-image: url('../images/backgroundChallenge.jpg');
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: black;
+    font-size: 14px !important;
+    font-family: Arial,sans-serif;
+    text-transform: none;
+}
+
+.ui-dialog-content {
+    background: rgba(255, 255, 255, 0.9);    
+}
+
+.noTitleStuff .ui-dialog-titlebar {
+    display:none
+}
+
+.ui-widget-content
+{
+    background: rgba(255, 255, 255, 0.9);    
+}
+
+.spanColor {
+    color: red;
+}
+
+.btnEstilo {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #1661dd;
+    border: 0px;
+    color: white;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    width: 180px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btnEstilo:hover {
+    background-color: #246EE9;
+}
+
+#btnRegisterReport {
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #1661dd;
+    border: 0px;
+    color: white;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    width: 180px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30%;
+}
+
+#btnRegisterReport:hover {
+    background-color: #246EE9;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+    body {
+        background-image: url('../images/backgroundMobile.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: black;
+        font-size: 12px !important;
+        font-family: Arial,sans-serif;
+    }
+
+    #container {
+        width: 600px;
+        text-align: center;
+    }
+
+    div .divBotonEspecial 
+    {
+        height: 10px !important; 
+        width: 100px !important;
+        text-align: center;
+        padding-top: 0px;
+        left: 20% !important;
+    }
+
+    btnLoginEspecial {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color:#1661dd; 
+        border: 0px;
+        color: white; 
+        height: 5rem; 
+        font-size:1.5rem; 
+        cursor: pointer;
+    }
+
+    .btnLoginEspecial:hover { 
+        background-color: #246EE9;
+    }
+}

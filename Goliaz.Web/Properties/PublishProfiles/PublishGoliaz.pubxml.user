@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://goliaz.com/httpdocs/Test</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Admin/data.aspx">
+      <publishTime>06/18/2015 14:13:46</publishTime>
+    </File>
+    <File Include="Admin/EditUser.aspx">
+      <publishTime>06/26/2015 19:29:44</publishTime>
+    </File>
+    <File Include="Admin/index.aspx">
+      <publishTime>06/30/2015 18:43:16</publishTime>
+    </File>
+    <File Include="Admin/mantUsers.aspx">
+      <publishTime>06/27/2015 18:51:08</publishTime>
+    </File>
+    <File Include="Admin/Report.aspx">
+      <publishTime>06/30/2015 18:40:55</publishTime>
+    </File>
+    <File Include="Admin/selectDay.aspx">
+      <publishTime>06/30/2015 17:07:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/16/2015 18:37:46</publishTime>
+    </File>
+    <File Include="bin/Goliaz.Dao.dll">
+      <publishTime>06/30/2015 18:44:41</publishTime>
+    </File>
+    <File Include="bin/Goliaz.Dto.dll">
+      <publishTime>06/30/2015 14:40:19</publishTime>
+    </File>
+    <File Include="bin/Goliaz.Framework.dll">
+      <publishTime>06/30/2015 18:44:44</publishTime>
+    </File>
+    <File Include="bin/Goliaz.Wcf.dll">
+      <publishTime>06/30/2015 18:44:45</publishTime>
+    </File>
+    <File Include="bin/Goliaz.Web.dll">
+      <publishTime>06/30/2015 18:44:46</publishTime>
+    </File>
+    <File Include="confirmEmail.aspx">
+      <publishTime>06/29/2015 15:40:16</publishTime>
+    </File>
+    <File Include="css/datepicker.css">
+      <publishTime>06/18/2015 11:08:23</publishTime>
+    </File>
+    <File Include="css/Estilos.css">
+      <publishTime>06/30/2015 18:32:07</publishTime>
+    </File>
+    <File Include="css/jquery-ui.css">
+      <publishTime>06/18/2015 11:20:04</publishTime>
+    </File>
+    <File Include="css/mobile.css">
+      <publishTime>06/20/2015 14:57:24</publishTime>
+    </File>
+    <File Include="css/normalize.css">
+      <publishTime>06/18/2015 09:52:31</publishTime>
+    </File>
+    <File Include="css/StyleIndex.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="images/background.jpg">
+      <publishTime>06/15/2015 16:36:04</publishTime>
+    </File>
+    <File Include="images/backgroundChallenge.jpg">
+      <publishTime>06/16/2015 16:46:41</publishTime>
+    </File>
+    <File Include="images/backgroundMobile.png">
+      <publishTime>06/18/2015 16:07:29</publishTime>
+    </File>
+    <File Include="images/edit-icon.png">
+      <publishTime>06/26/2015 12:29:59</publishTime>
+    </File>
+    <File Include="images/freeleticsWorld.jpg">
+      <publishTime>06/15/2015 02:01:48</publishTime>
+    </File>
+    <File Include="images/header.jpg">
+      <publishTime>06/14/2015 23:36:16</publishTime>
+    </File>
+    <File Include="images/image.jpg">
+      <publishTime>06/14/2015 23:31:36</publishTime>
+    </File>
+    <File Include="images/logomask2.png">
+      <publishTime>06/19/2015 18:13:43</publishTime>
+    </File>
+    <File Include="images/remove-icon.png">
+      <publishTime>06/27/2015 15:10:04</publishTime>
+    </File>
+    <File Include="img/1920/blue.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/1920/purple.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/1920/red.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a01.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a02.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a03.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a04.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a06.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a07.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a08.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a09.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a10.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a11.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a12.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a13.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a14.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a15.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a16.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a17.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a18.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a19.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a20.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a21.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/a22.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/01.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/02.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/03.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/04.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/05.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/06.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/07.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/08.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/09.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/10.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/11.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/12.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/13.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/14.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/15.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/16.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/17.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/18.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/19.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/20.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/21.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/22.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/23.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/24.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/25.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/26.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/27.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/28.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/29.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/30.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-01.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-02.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-03.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-04.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-05.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-06.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-07.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/alila/thumb-08.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/arrow.png">
+      <publishTime>06/18/2015 09:52:22</publishTime>
+    </File>
+    <File Include="img/b02.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b03.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b05.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b06.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b07.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b10.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b11.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b12.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b13.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b14.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b16.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b17.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b18.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b20.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/b21.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/back.jpg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/browser-icons.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/close.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/darkdenim3.png">
+      <publishTime>06/18/2015 09:52:22</publishTime>
+    </File>
+    <File Include="img/dark_leather.png">
+      <publishTime>06/18/2015 09:52:22</publishTime>
+    </File>
+    <File Include="img/Icon-Slider-12-jQuery.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/Icon-Slider-12-No-jQuery.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/loading.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/loading2.gif">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/play.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="img/t01.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="index.aspx">
+      <publishTime>06/30/2015 16:23:51</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-icons_222222_256x240.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-icons_228ef1_256x240.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/images/ui-icons_ffffff_256x240.png">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/jquery-1.11.3.min.js">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/jquery-ui.js">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="js/jquery.inputmask.bundle.js">
+      <publishTime>06/30/2015 15:27:43</publishTime>
+    </File>
+    <File Include="js/jsLogin.js">
+      <publishTime>06/30/2015 14:39:56</publishTime>
+    </File>
+    <File Include="js/jsMantUsers.js">
+      <publishTime>06/27/2015 15:46:09</publishTime>
+    </File>
+    <File Include="js/jssor.js">
+      <publishTime>06/16/2015 16:32:05</publishTime>
+    </File>
+    <File Include="js/jssor.slider.js">
+      <publishTime>06/16/2015 16:32:05</publishTime>
+    </File>
+    <File Include="js/watermark.js">
+      <publishTime>06/14/2015 22:52:50</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>06/30/2015 14:36:37</publishTime>
+    </File>
+    <File Include="Report.aspx">
+      <publishTime>06/29/2015 17:45:10</publishTime>
+    </File>
+    <File Include="Services/wcfGoliaz.svc">
+      <publishTime>06/26/2015 14:05:12</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/29/2015 17:39:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

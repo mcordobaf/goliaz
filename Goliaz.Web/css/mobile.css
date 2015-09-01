@@ -1,0 +1,7 @@
+﻿body {
+    background-image: url('../images/backgroundChallenge.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+    font-size: 12px !important;
+    font-family: Arial,sans-serif;
+}

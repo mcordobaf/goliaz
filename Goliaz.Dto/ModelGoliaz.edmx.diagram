@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc0d1bc2556f414eb37e572d5a0c3c45" Name="Diagram1">
+        <EntityTypeShape EntityType="goliazco_FWModel.LOG_ERROR" Width="1.5" PointX="7.375" PointY="7.375" />
+        <EntityTypeShape EntityType="goliazco_FWModel.REPORT_DAY" Width="1.5" PointX="6.375" PointY="4" />
+        <EntityTypeShape EntityType="goliazco_FWModel.USERS" Width="1.5" PointX="0.72029685448868985" PointY="7.1438597622997406" />
+        <EntityTypeShape EntityType="goliazco_FWModel.DAYS" Width="1.5" PointX="0.063635576546022476" PointY="3.2205835148787982" />
+        <EntityTypeShape EntityType="goliazco_FWModel.DAYS_REPORT" Width="1.5" PointX="4.2092023716351026" PointY="19.384476640906406" />
+        <AssociationConnector Association="goliazco_FWModel.FK_DAYS_REPORT_USERS" />
+        <AssociationConnector Association="goliazco_FWModel.FK_REPORT_DAY_DAYS_REPORT" />
+        <EntityTypeShape EntityType="goliazco_FWModel.DAYS_CONFIG" Width="1.5" PointX="2.7642182720658455" PointY="22.542418147689858" />
+        <AssociationConnector Association="goliazco_FWModel.FK_DAYS_CONFIG_DAYS" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
